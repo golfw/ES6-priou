@@ -20,6 +20,7 @@ La syntaxe d'objet a bien évolué, et a surtout était simplifié.
 ## Syntaxe ES6
 
 ### Construction
+<hr>
 
 La construction d'un objet se fait comme l'exemple ci-dessus avec des raccourcis de noms de propriétés :
 
@@ -52,7 +53,7 @@ return {
 ```
 
 ### Object.assign()
-
+<hr>
 L'`Object.assign()` sert à copier les valeurs de toutes les propriétés direct d'un objet.
 
 ```js
@@ -63,7 +64,7 @@ console.log(copie);
 ```
 
 ### Class
-
+<hr>
 Les classes sont juste des fonctions spéciales, utilisées pour simplifier et rendre le code plus lisible.
 
 ```js
@@ -79,7 +80,7 @@ console.log(eric.name); // Output: Eric
 ```
 
 ### Accesseurs get et set
-
+<hr>
 La syntaxe `get` permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.
 
 La syntaxe `set` permet de lier une propriété d'un objet à une fonction qui sera appelée à chaque tentative de modification de cette propriété.
@@ -111,11 +112,12 @@ const full_name =
 ```
 
 ### Array
-
+<hr>
 Nouvelles méthodes ajoutées à Array :
 
 
 ##### Array.from()
+<hr>
 La méthode `from()` permet de créer une nouvelle instance d'Array à partir d'un objet itérable ou semblable à un tableau.
 
 
@@ -126,6 +128,7 @@ console.log(example);
 ```
 
 ##### Array.of()
+<hr>
 La methode `of()` permet de créer une nouvelle instance d'objet Array avec un nombre variable d'argument, quels que soient leur nombre ou leur type.
 
 ```js
@@ -134,7 +137,8 @@ console.log(example);
 // output: [1, 2, 3]
 ```
 
-##### Array.prototype.keys() 
+##### Array.prototype.keys()
+<hr>
 La méthode `keys()` renvoie un nouvel objet Array Iterator qui contient les clefs pour chaque indice du tableau.
 
 ```js
@@ -145,6 +149,7 @@ console.log(example);
 ```
 
 ##### Array.prototype.entries() 
+<hr>
 La méthode `entries()` renvoie un nouvel objet de type  Array Iterator qui contient le couple clef/valeur pour chaque éléments du tableau.
 
 ```js
@@ -155,6 +160,7 @@ console.log(example);
 ```
 
 ##### Array.prototype.find() 
+<hr>
 La méthode `find()` renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur undefined est renvoyée.
 
 ```js
@@ -166,6 +172,7 @@ console.log(found, notfound)
 ```
 
 ##### Array.prototype.fill() 
+<hr>
 La méthode `fill()` remplit tous les éléments d'un tableau entre deux index avec une valeur statique.
 
 ```js
@@ -175,6 +182,7 @@ console.log(arr)
 ```
 
 ##### Array.prototype.copyWithin()
+<hr>
 La méthode `copyWithin()` effectue une copie superficielle d'une partie d'un tableau sur ce même tableau et le renvoie, sans modifier sa taille.
 
 ```js
@@ -185,6 +193,7 @@ console.log(arr.copyWithin(1, 5)])
 
 
 ### Methods
+<hr>
 Une méthode est une fonction qui est une propriété d'un objet.
 
 
