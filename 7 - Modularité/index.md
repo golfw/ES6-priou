@@ -1,2 +1,0 @@
-# Modularité en ES6
-
