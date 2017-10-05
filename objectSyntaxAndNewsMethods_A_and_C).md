@@ -13,7 +13,7 @@
 
 
 <br><br><br>
-## Introdcution
+## Introduction
 
 Le JavaScript se voit évoluer depuis longtemps, et a été mis en second plan dans la conception des pages web. Aujourd'hui, c'est une autre histoire, on parle d'application web, qui son entièrement contrôlées par du code JavaScript. Ce language s'est refait une beauté en juin 2015 : ECMAScript 6, alias JavaScript 2015.
 
