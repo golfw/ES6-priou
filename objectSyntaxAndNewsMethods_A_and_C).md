@@ -54,9 +54,9 @@ L'`Object.assign()` sert à copier les valeurs de toutes les propriétés direct
 
 ```js
 const obj = { full_name: 'Eric Priou' };
-const copie = Object.assign({}, obj);
+const copie = Object.assign({age: 25}, obj);
 console.log(copie);
-// output: { full_name: 'Eric Priou' }
+// output: { full_name: 'Eric Priou', age: 25 }
 ```
 <hr>
 
