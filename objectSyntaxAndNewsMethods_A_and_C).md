@@ -26,6 +26,8 @@ return {
 
 // output : {firstName : 'Eric', lastName: 'Priou'}
 ```
+[code](https://jsfiddle.net/KylianLM/39r2n4tj/)
+
 ## Super
 
 Le super permet d'appelé une méthode dans le parent.
