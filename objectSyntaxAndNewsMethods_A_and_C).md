@@ -2,41 +2,21 @@
 
 ### Sommaire
 
-* [Introduction](#introduction)
-* [Construction](#construction)
-* [Object.assign](#object.assign)
-* [Class](#class)
-* [Accesseurs](#accesseurs)
-* [Array](#array)
-* [Methods](#methods)
+* [Déclaration d'attribut](#attribute-declaration)
+* [super](#super)
+* [Object Destructuring](#object-destructuring)
+* [Accesseurs get et set](#accesseurs-get-set)
+	* [Get & Set](#get-set)
+* [Object.assign()](#object-assign)
+* [Generateurs](#generateurs)
+* [Nouvelles méthodes d'Array](#nouvelles-methodes-array)
+* [sources](#sources)
 
+## Déclaration d'attribut
 
-<br><br><br>
-## Introduction
-
-La syntaxe d'objet a bien évolué, et a surtout était simplifié.
-
-
-## Construction
-La construction d'un objet se fait comme l'exemple ci-dessus avec des raccourcis de noms de propriétés :
+La clé porte le même nom que la variable.
 
 ```js
-
-// Object structure
-
-const full_name = 
-{
-	// Plus besoin d'utiliser le mot clé *function*
-	getFullName(firstName, lastName)
-	{
-		return firstName + ' ' + lastName;
-	}	
-};
-```
-
-```js
-// la clé porte le même nom que la variable
-
 const firstName = 'Eric';
 const lastName = 'Priou';
 
@@ -47,70 +27,124 @@ return {
 
 // output : {firstName : 'Eric', lastName: 'Priou'}
 ```
-<hr>
+## Super
 
-## Object.assign()
-L'`Object.assign()` sert à copier les valeurs de toutes les propriétés direct d'un objet.
-
-```js
-const obj = { full_name: 'Eric Priou' };
-const copie = Object.assign({age: 25}, obj);
-console.log(copie);
-// output: { full_name: 'Eric Priou', age: 25 }
-```
-<hr>
-
-## Class
-Les classes sont juste des fonctions spéciales, utilisées pour simplifier et rendre le code plus lisible.
+Le super permet d'appelé une méthode dans le parent.
 
 ```js
 
-class Person {
-    constructor(name) {
-        this.name = name;
+const parent = {
+    foo() {
+        console.log("Hello from the Parent");
     }
 }
 
-let eric = new Person('Eric');
-console.log(eric.name); // Output: Eric
+const child = {
+    foo() {
+        super.foo();
+        console.log("Hello from the Child");
+    }
+}
+
+// Créer de l'héritage
+Object.setPrototypeOf(child, parent);
+child.foo(); // Hello from the Parent
+			   // Hello from the Child
+			   
+
 ```
-<hr>
+
+## Object Destructuring
+
+```js
+// for array
+function foo() {
+    return [1, 2, 3];
+}
+let arr = foo(); // [1,2,3]
+
+let [a, b, c] = foo();
+console.log(a, b, c); // 1 2 3
+
+
+// for object
+function bar() {
+    return {
+        x: 4,
+        y: 5,
+        z: 6
+    };
+}
+let { x: a, y: b, z: c } = bar();
+console.log(a, b, c); // 4 5 6
+
+```
 
 ## Accesseurs get et set
+
+### Get & Set
+
 La syntaxe `get` permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.
 
 La syntaxe `set` permet de lier une propriété d'un objet à une fonction qui sera appelée à chaque tentative de modification de cette propriété.
 
-Si je reprend la variable `full_name` :
 
 ```js
+var person = {
+  get getName() {
+    return this.firstName;
+  },
+  firstName: "",
+  
+  set setName(text) {
+  	this.firstName = text;
+  }
+}
 
-const full_name = 
-{
-	// Plus besoin d'utiliser le mot clé *function*
-	get full_name(firstName, lastName)
-	{
-		return firstName + ' ' + lastName;
-	}
-	
-	set full_name(firstName, lastName)
-	{
-		if((! firstName || value == ''))
-			throw new Error('invalid firstName');
-		
-		if((! lastName || lastName == ''))
-			throw new Error('invalid lastName');
-			
-		this.full_name = full_name
-	}	
-};
+console.log(person.getName); // ""
+person.setName = 'Charles-Henri-Edouard';
+console.log(person.getName); // "Charles-Henri-Edouard"
+```
+
+## Object.assign()
+
+L'`Object.assign()` sert à copier les valeurs de toutes les propriétés direct d'un objet.
+
+```js
+const name = { firstName: 'Eric' };
+const person = {age: 25, lastName: 'Priou'}
+const copie = Object.assign(person, name);
+console.log(copie);  // { age: 25, firstName: 'Eric', lastName: 'Priou' }
+```
+
+## Generateurs
+
+L'objet `Generator` est renvoyé par une fonction génératrice, c'est à la fois un `itérateur` (cela définit une façon standard pour reproduire une suite de valeurs) qui implémente next() et un `itérable` (quelque  chose qui peut être parcourue).
+
+La différence avec une fonction classique, est que les fonctions classiques commencent par `function`, alors que les fonctions génératrices commencent par `function*`.
+
+
+
+```js
+function* foo() { 
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const f = foo();
+console.log(f.next()); // {value: 1, done: false}
+console.log(f.next()); // {value: 2, done: false}
+console.log(f.next()); // {value: 3, done: false}
+console.log(f.next()); // {value: undefined, done: true}
+
 
 ```
-<hr>
 
-## Array
-Nouvelles méthodes ajoutées à Array :
+Dans une fonction génératrice, `yield` est un mot-clé, avec une syntaxe similaire à return. La différence est que, tandis qu’une fonction (même un générateur) ne peut utiliser return qu’une seule fois, un générateur peut utiliser yield plusieurs fois. L’expression yield suspend l’exécution du générateur, qui peut donc être reprise plus tard.
 
+
+## Nouvelles méthodes d'Array
 
 ### Array.from()
 La méthode `from()` permet de créer une nouvelle instance d'Array à partir d'un objet itérable ou semblable à un tableau.
@@ -185,24 +219,25 @@ const arr = ["hello","alice", "my", "name", "is" "bob"]
 console.log(arr.copyWithin(1, 5)])
 // output  "hello","bob", "my", "name", "is" "bob"]
 ```
-<hr>
-
-## Methods
-Une méthode est une fonction qui est une propriété d'un objet.
 
 
-```js
-class Person {
-    constructor(name) {
-        this.name = name;
-    }
-         
-    speak() {
-        console.log(this.name + ' is speaking.');
-    }
-}
-         
-let eric = new Person('Eric');
-console.log(eric);
-// output 'Eric is speaking'
-```
+## <u>sources</u> :
+
+<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet">Mozilla : Initialisateur d'objet</a>
+
+<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/from">Mozilla : Array.from()</a>
+
+<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/keys">Mozilla : Array.prototype.keys()</a>
+
+<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/entries">Mozilla : Array.prototype.entries()</a>
+
+<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/find">Mozilla : Array.prototype.find()</a>
+
+<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/fill">Mozilla : Array.prototype.fill()</a>
+
+<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/copyWithin">Mozilla : Array.prototype.copyWithin()</a>
+
+<a href="https://tech.mozfr.org/post/2015/05/23/ES6-en-details-%3A-les-generateurs">ES6 en détails :  les générateurs</a>
+
+<a href="https://learn-anything.xyz/programming/programming-languages/javascript/es6">Learn-anything Javascript ES6</a>
+
