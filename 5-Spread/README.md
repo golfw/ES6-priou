@@ -21,12 +21,12 @@ arr3 = = arr1.concat(arr2);
 La décomposition d'objets permet de lier des variables à partir des différentes propriétés d’un objet.
 
 ```javascript
-var array1 = { toto: 'Eric', x: 42 };
-var array2 = { tata: 'Gaoussou', y: 13 };
+var array1 = { toto: 'Tata', x: 42 };
+var array2 = { tata: 'Toto', y: 13 };
 
-var clone = { ...array }; // Object { toto: 'Eric', x: 42 }
+var clone = { ...array1 }; // Object { toto: 'Eric', x: 42 }
 
-var fusion = { ...array1, ...array2 }; // Object { toto: 'Eric', x: 42, tata: 'Gaoussou' y: 28 };
+var fusion = { ...array1, ...array2 }; // Object { toto: 'Toto', x: 42, tata: 'Tata' y: 28 };
 ```
 
 # La décomposition ne s'applique qu'aux itérables Array -> [], Object -> {}
