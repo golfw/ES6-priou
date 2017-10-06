@@ -29,6 +29,18 @@ var clone = { ...array }; // Object { toto: 'Eric', x: 42 }
 var fusion = { ...array1, ...array2 }; // Object { toto: 'Eric', x: 42, tata: 'Gaoussou' y: 28 };
 ```
 
+# La décomposition ne s'applique qu'aux itérables Array -> [], Object -> {}
+```javascript
+var obj = {"clé1" : "valeur1"};
+function maFonction(x) {
+  console.log(x); // undefined
+}
+maFonction(...obj);
+var args = [...obj];
+console.log(args, args.length) //[] 0
+```
+Pour rappel : l'opération de décomposition ne s'applique qu'aux objets itérables :
+
 # Utiliser la décomposition dans les appels de fonction
 
 Avec ES6, il est désormais possible de passer des arguments à une fonction avec le spread :
@@ -46,4 +58,3 @@ function f(v, w, x, y, z) { }
 var args = [0, 1];
 f(-1, ...args, 2, ...[3]);
 ```
-
