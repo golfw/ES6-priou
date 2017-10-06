@@ -4,9 +4,8 @@
 
 * [Attribute declaration](#attribute-declaration)
 * [Super](#super)
-* [Object Destructuring](#object-destructuring)
+* [Object Destructuring](#array-and-object-destructuring)
 * [Accessors get and set](#accessors-get-and-set)
-	* [Get and Set](#get-and-set)
 * [Object assign](#object-assign)
 * [Generators](#generators)
 * [New Array Methods](#new-array-methods)
@@ -54,7 +53,7 @@ child.foo(); // Hello from the Parent
 
 ```
 
-## Object Destructuring
+## Array and Object Destructuring
 
 ```js
 // for array
@@ -80,9 +79,18 @@ console.log(a, b, c); // 4 5 6
 
 ```
 
+```js
+var a = 1;
+var b = 3;
+
+[a, b] = [b, a];
+console.log(a); // 3
+console.log(b); // 1
+
+```
+
 ## Accessors get and set
 
-### Get and Set
 
 La syntaxe `get` permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.
 
