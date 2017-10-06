@@ -1,6 +1,6 @@
 # Modularité en Javascript
 
-##Introduction :
+## Introduction :
 
 ### Définition d’une programmation modulaire:
 
