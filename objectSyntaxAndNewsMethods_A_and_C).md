@@ -2,13 +2,14 @@
 
 ### Sommaire
 
-* [Déclaration d'attribut](#déclaration-d'attribut)
+* [Déclaration d'attribut](#attribute-declaration)
 * [super](#super)
 * [Object Destructuring](#object-destructuring)
-* [Accesseurs get et set](#accesseurs-get-et-set)
-	* [Get & Set](#get-&-set)
-* [Object.assign()](#object.assign())
-* [Nouvelles méthodes d'Array](#nouvelles-methodes-d-'-array)
+* [Accesseurs get et set](#accesseurs-get-set)
+	* [Get & Set](#get-set)
+* [Object.assign()](#object-assign)
+* [Generateurs](#generateurs)
+* [Nouvelles méthodes d'Array](#nouvelles-methodes-array)
 * [sources](#sources)
 
 ## Déclaration d'attribut
