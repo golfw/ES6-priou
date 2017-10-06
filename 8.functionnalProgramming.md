@@ -1,4 +1,4 @@
-#La programmation Fonctionnelle
+# La programmation Fonctionnelle
 
 Le paradigme de la programmation fonctionnelle dans ES6 est associé au traitement de données dans les collections. Il permet de traiter les données sans effets de bords et sans perdre modifier la donnée. Tout cela grâce à différents concepts:
 transparence référentielle,
