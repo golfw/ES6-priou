@@ -4,13 +4,12 @@
 
 * [Attribute declaration](#attribute-declaration)
 * [Super](#super)
-* [Object Destructuring](#object-destructuring)
+* [Object Destructuring](#array-and-object-destructuring)
 * [Accessors get and set](#accessors-get-and-set)
-	* [Get & Set](#get-&-set)
-* [Object.assign](#object.assign)
+* [Object assign](#object-assign)
 * [Generators](#generators)
 * [New Array Methods](#new-array-methods)
-* [sources](#sources)
+* [Sources](#sources)
 
 ## Attribute declaration
 
@@ -54,7 +53,7 @@ child.foo(); // Hello from the Parent
 
 ```
 
-## Object Destructuring
+## Array and Object Destructuring
 
 ```js
 // for array
@@ -80,9 +79,18 @@ console.log(a, b, c); // 4 5 6
 
 ```
 
+```js
+var a = 1;
+var b = 3;
+
+[a, b] = [b, a];
+console.log(a); // 3
+console.log(b); // 1
+
+```
+
 ## Accessors get and set
 
-### Get & Set
 
 La syntaxe `get` permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.
 
@@ -106,7 +114,7 @@ person.setName = 'Charles-Henri-Edouard';
 console.log(person.getName); // "Charles-Henri-Edouard"
 ```
 
-## Object.assign
+## Object assign
 
 L'`Object.assign()` sert à copier les valeurs de toutes les propriétés direct d'un objet.
 
@@ -221,7 +229,7 @@ console.log(arr.copyWithin(1, 5)])
 ```
 
 
-## <u>sources</u> :
+## Sources
 
 <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet">Mozilla : Initialisateur d'objet</a>
 
