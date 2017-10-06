@@ -2,7 +2,7 @@
 
 ### Sommaire
 
-* [Déclaration d'attribut](#declaration-d-'-attribut)
+* [Déclaration d'attribut](#déclaration-d-'-attribut)
 * [super](#super)
 * [Object Destructuring](#object-destructuring)
 * [Accesseurs get et set](#accesseurs-get-et-set)
