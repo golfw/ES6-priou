@@ -11,7 +11,7 @@ La modularité __n’existe pas nativement__ dans le JavaScript.
 
 La notion import et d’export a été intégré dans ES6. Pour cela, il faut s'aider de l'ibrairies externes.
 
-###Quel est l'intérêt de la modularité ?
+### Quel est l'intérêt de la modularité ?
 
 Pour comprendre les avantage de la modularité moderne, il faut d’abord revenir sur les méthodes utilisés auparavant. 
 
