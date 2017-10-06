@@ -7,7 +7,7 @@
 * [Object Destructuring](#object-destructuring)
 * [Accessors get and set](#accessors-get-and-set)
 	* [Get and Set](#get-and-set)
-* [Object.assign](#object.assign)
+* [Object assign](#object-assign)
 * [Generators](#generators)
 * [New Array Methods](#new-array-methods)
 * [sources](#sources)
@@ -106,7 +106,7 @@ person.setName = 'Charles-Henri-Edouard';
 console.log(person.getName); // "Charles-Henri-Edouard"
 ```
 
-## Object.assign
+## Object assign
 
 L'`Object.assign()` sert à copier les valeurs de toutes les propriétés direct d'un objet.
 
