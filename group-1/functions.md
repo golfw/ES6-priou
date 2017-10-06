@@ -6,70 +6,40 @@
 ## Sommaire
 
 
-#### Rappels
-
+#### EcmaScript courant:
 
 * Définition d’une fonction
 
 * Les fonctions EcmaScript courantes
 
-	* Les fonctions 
-
-		* Déclarations de fonction
-
-		* Expression de fonction
-
-	* Les fonctions anonymes & IIFE
-
-		* Fonction anonyme
-
-		* Fonction anonyme auto instanciée 
-
-	* Closures
-
+	
 * Usage du this
 
 * “Use Strict”	
 
 
+#### Nouveautés ES6:
+##### Les fonctions fléchées (Arrow Functions)
 
-#### Les fonctions fléchées (Arrow Functions)
-
-
-* Problématique	
-
-	* Lexical ```this``` binding;
-
-	* Shorter syntactical form (() => {} vs. function () {})
+* Besoin	
 
 * Syntaxes
 
-	* Syntaxe standard
-
-	* Déclinaisons
-
-	* Exemples dans un contexte
-
-
-
 * Spécificité du ```this```
 
-	* Limites du ```this``` avec .apply() et .call()
-
-
-
-#### Les paramètres par défaut 
+##### Les paramètres par défaut 
 
 * Problématique ES5
 
 * Syntaxe
 
+#### Liens:
 
 ___
 
 
 
-# Rappels
+# EcmaScript courant
 
 	
 
@@ -84,7 +54,7 @@ Une fonction est une procédure/suite d’instruction jouant un rôle précis da
 Pour définir une fonction,  il suffit de commencer par le mot function.
 
 
-
+##### Exemple: 
 ```
 
 function carré(nombre) {
@@ -108,7 +78,7 @@ function carré(nombre) {
 Ce qu’on appelle l’expression de fonction et le fait de déclarer une fonction dans une variable. Afin d’avoir un code le plus propre possible, il faut donner un nom à la fonction en la déclarant dans la variable.
 
 
-
+##### Exemple: 
 ```
 
 var carré = function (nombre) { 
@@ -120,7 +90,9 @@ var carré = function (nombre) {
 ```
 
 
-Pour définir une fonction,  il suffit de commencer par le mot function.
+Ou sinon, il suffit de commencer par  ```function``` puis le nom de la fonction.
+
+##### Exemple: 
 
 ```
 function carré(nombre) {
@@ -136,18 +108,15 @@ function carré(nombre) {
 Les fonctions dites anonymes, sont des fonctions qui ne sont pas nommées, et donc, qui ne comportent pas de noms. Ce genre de fonctions est souvent utilisé pour les fonctions anonymes auto-instanciées ou IIFE pour Immediately Invoked Function Expression. Ce type de fonctions permet de ne pas prendre en compte les variables globales. Cette fonction est appelée tout de suite après la fermeture de celle-ci.
 
 
-
+##### Exemple: 
 ```
+function() {}   // Fonction anonymes
 
 ( function ( x, y ) {
 
-    return x + y;
+    return x + y; // IIFE
 
 } ) ( );
-
-
-
-function() {// Code isolé}  
 
 ```
 
@@ -160,7 +129,7 @@ function() {// Code isolé}
 Une closure est une fonction interne qui utilise les variables locales dans la fonction dans laquelle elle est imbriquée. La closure accepte trois portées de variables : il a accès à ses propres variables (entre ses accolades), aux variables de la fonction dans laquelle il est imbriqué, et les variables globales.
 
 
-
+##### Exemple: 
 ```
 
 function creerFonction() {
@@ -200,6 +169,7 @@ Dans les trois cas d’usages du ```this``` en EcmaScript, au sein d’un objet 
 De plus, on peut changer la portée du ```this``` avec la fonction apply() ou call(), ce qui peut représenter un risque de maintenabilité. Avec ECMAScript 3/5, ce problème a pu être résolu en affectant la valeur de ```this``` à une autre variable 
 
 
+##### Exemple: 
 
 ```
 
@@ -299,7 +269,7 @@ Cette nouvelle syntaxe intègre une simplification de la syntaxe en retirant le 
 Ainsi, une fonction fléchée vide se déclare comme l’exemple ci-dessous, vide, elle retourne undefined:
 
 
-
+##### Exemple: 
 ```
 let empty = () => {};
 
@@ -310,7 +280,7 @@ let empty = () => {};
 Pour faire encore plus simple il est possible, dans le cas d’un seul paramètre et d’une expression simple de retirer les () et les {}, même dans le cas d’une expression de priorité inférieure, pour une multiplication dans cet exemple, :
 
 
-
+##### Exemple: 
 ```
 let identity = x => x;
 
@@ -323,7 +293,7 @@ let square = x => x * x;
 Dans le cas cas ou l’on veut retourner un objet littéral, la présence des accolades {} ne permet pas directement de déclarer l’objet entre accolades {{key:value}} par soucis de lisibilité. Il est donc possible de mettre entre parenthèse le bloc d’expression pour retourner un objet littéral:
 
 
-
+##### Exemple: 
 ```
 let key_maker = x => ({key: x});
 
@@ -346,7 +316,7 @@ Dans le cas d’une fonctionne anonyme, la syntaxe reste la même:
 
 Et de même, si l’on veut faire une IIFE en ES6 avec une fonction fléchée c’est possible en appliquant la syntaxe et en ajoutant ():
 
-
+##### Exemple: 
 
 ```
 ()=> {
@@ -364,7 +334,7 @@ En outre, pour la fonction fléchée, il n’est plus nécessaire de spécifier 
 
 La problématique de contexte du ```this``` dans une fonction fléchée a été gérée, le ```this``` va faire référence au contexte de déclaration de la fonction et non à l’objet global ( windows par exemple)
 
-
+##### Exemple: 
 
 ```
 const obj = {
@@ -400,7 +370,7 @@ Grâce aux paramètres par défaut qui existent depuis ECMAScript 6, on peut se 
 
 
 
-#### Avant - ES5 
+##### Exemple avant ES6: 
 
 ```
 function multiplier(a, b) {
@@ -412,7 +382,7 @@ function multiplier(a, b) {
 
 
 
-#### Maintenant - ES6 : 
+##### Exemple ES6 : 
 
 ```
 function multiplier(a, b = 1) {
@@ -459,6 +429,43 @@ function f([x, y] = [1, 2], {z: z} = {z: 3}) {
 f(); // 6
 
 ```
+
+___
+
+
+# Liens:
+
+
+Arguments ES6:
+
+* [https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/arguments](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/arguments)
+
+Fonctions Fléchées:
+
+* [https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_flechees documentation](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es documentation)
+
+
+* [http://putaindecode.io/fr/articles/js/es2015/arrow-functions/](http://putaindecode.io/fr/articles/js/es2015/arrow-functions/)
+
+
+* [http://tc39wiki.calculist.org/es6/arrow-functions/ ](http://tc39wiki.calculist.org/es6/arrow-functions/ )
+
+
+
+Valeur par défaut:
+
+* [https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_d%C3%A9faut_des_arguments](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_d%C3%A9faut_des_arguments)
+
+Use strict:
+
+* [https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Strict_mode](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Strict_mode)
+
+
+Arrow Functions:
+
+* [http://tc39wiki.calculist.org/es6/arrow-functions/](http://tc39wiki.calculist.org/es6/arrow-functions/)
+
+
 
 
 
