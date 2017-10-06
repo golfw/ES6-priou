@@ -6,7 +6,7 @@
 * [Super](#super)
 * [Object Destructuring](#object-destructuring)
 * [Accessors get and set](#accessors-get-and-set)
-	* [Get & Set](#get-&-set)
+	* [Get and Set](#get-and-set)
 * [Object.assign](#object.assign)
 * [Generators](#generators)
 * [New Array Methods](#new-array-methods)
@@ -82,7 +82,7 @@ console.log(a, b, c); // 4 5 6
 
 ## Accessors get and set
 
-### Get & Set
+### Get and Set
 
 La syntaxe `get` permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.
 
