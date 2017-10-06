@@ -41,6 +41,16 @@ console.log(args, args.length) //[] 0
 ```
 Pour rappel : l'opération de décomposition ne s'applique qu'aux objets itérables :
 
+# Utiliser la décomposition dans les déclaration de fonction
+
+On peut utiliser le Spread pour déclarer une fonction avec un nombre infini de paramètres
+
+Exemple:
+```javascript
+var maFn = function(...args) {
+// ma fonction
+}
+
 # Utiliser la décomposition dans les appels de fonction
 
 Avec ES6, il est désormais possible de passer des arguments à une fonction avec le spread :
