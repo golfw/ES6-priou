@@ -10,7 +10,7 @@
 * [Object assign](#object-assign)
 * [Generators](#generators)
 * [New Array Methods](#new-array-methods)
-* [sources](#sources)
+* [Sources](#sources)
 
 ## Attribute declaration
 
@@ -221,7 +221,7 @@ console.log(arr.copyWithin(1, 5)])
 ```
 
 
-## <u>sources</u> :
+## Sources
 
 <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet">Mozilla : Initialisateur d'objet</a>
 
