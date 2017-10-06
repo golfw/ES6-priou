@@ -2,17 +2,17 @@
 
 ### Sommaire
 
-* [Déclaration d'attribut](#attribute-declaration)
-* [super](#super)
+* [Attribute declaration](#attribute-declaration)
+* [Super](#super)
 * [Object Destructuring](#object-destructuring)
-* [Accesseurs get et set](#accesseurs-get-set)
-	* [Get & Set](#get-set)
-* [Object.assign()](#object-assign)
-* [Generateurs](#generateurs)
-* [Nouvelles méthodes d'Array](#nouvelles-methodes-array)
+* [Accessors get and set](#accessors-get-and-set)
+	* [Get & Set](#get-&-set)
+* [Object.assign](#object.assign)
+* [Generators](#generators)
+* [New Array Methods](#new-array-methods)
 * [sources](#sources)
 
-## Déclaration d'attribut
+## Attribute declaration
 
 La clé porte le même nom que la variable.
 
@@ -80,7 +80,7 @@ console.log(a, b, c); // 4 5 6
 
 ```
 
-## Accesseurs get et set
+## Accessors get and set
 
 ### Get & Set
 
@@ -106,7 +106,7 @@ person.setName = 'Charles-Henri-Edouard';
 console.log(person.getName); // "Charles-Henri-Edouard"
 ```
 
-## Object.assign()
+## Object.assign
 
 L'`Object.assign()` sert à copier les valeurs de toutes les propriétés direct d'un objet.
 
@@ -117,7 +117,7 @@ const copie = Object.assign(person, name);
 console.log(copie);  // { age: 25, firstName: 'Eric', lastName: 'Priou' }
 ```
 
-## Generateurs
+## Generators
 
 L'objet `Generator` est renvoyé par une fonction génératrice, c'est à la fois un `itérateur` (cela définit une façon standard pour reproduire une suite de valeurs) qui implémente next() et un `itérable` (quelque  chose qui peut être parcourue).
 
@@ -144,7 +144,7 @@ console.log(f.next()); // {value: undefined, done: true}
 Dans une fonction génératrice, `yield` est un mot-clé, avec une syntaxe similaire à return. La différence est que, tandis qu’une fonction (même un générateur) ne peut utiliser return qu’une seule fois, un générateur peut utiliser yield plusieurs fois. L’expression yield suspend l’exécution du générateur, qui peut donc être reprise plus tard.
 
 
-## Nouvelles méthodes d'Array
+## New Array Methods
 
 ### Array.from()
 La méthode `from()` permet de créer une nouvelle instance d'Array à partir d'un objet itérable ou semblable à un tableau.
