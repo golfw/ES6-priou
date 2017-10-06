@@ -365,6 +365,13 @@ const { JS, UX } = getnotesHetic()
 JS // 15
 UX // 14
 
+// On peut également optimiser les require('')
+// ES5:
+const superFunction = require('./mesFunctions').superFunction
+
+//ES6:
+const { superFunction } = require('./mesFunctions')
+
 ```
 
 **[⬆ Retour en haut](#table-des-matières)**
