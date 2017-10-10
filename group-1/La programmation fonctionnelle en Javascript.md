@@ -18,9 +18,9 @@ Le javascript n'est pas un véritable langage de programmation fonctionnelle (au
 
 ### 1. Immutabilité
 
-Un variable n’est jamais muté, cela permet de ne pas souffrir d’`effets de bord` (c.a.d la variable n’est pas mutée à notre insu).
-en programmation fonctionnelle, x = x + 1 est illégal. Il n'y a pas de variables dans la programmation fonctionnelle.
-Les valeurs stockées sont toujours appelées variables à cause de l'historique mais elles sont des constantes, c'est-à-dire une fois que x prend une valeur, c'est cette valeur pour la vie.
+Un variable n’est jamais mutée, cela permet de ne pas souffrir d’`effets de bord` (c.a.d la variable n’est pas mutée à notre insu).
+en programmation fonctionnelle, x = x + 1 est illégal. **Il n'y a pas de variables dans la programmation fonctionnelle**.
+Les valeurs stockées sont toujours appelées variables à cause de l'historique mais elles sont des **constantes**, c'est-à-dire une fois que x prend une valeur, c'est cette valeur pour la vie.
 
 ```javascript
 var toto = [ “titi”, “tata”]
@@ -29,6 +29,7 @@ var bibi = toto.push(“toto”)
 // on peut aussi faire ca avec les nouvelle fonctionnalités javascript
 var bibi = [...toto, “toto”]
 ```
+**Elixir:**
 
 ```elixir
 map_set = MapSet.new
