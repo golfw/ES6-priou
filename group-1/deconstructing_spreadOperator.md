@@ -189,8 +189,12 @@ console.log(friends);  // ['renan', 'hugo'] (inchangé)
 
   var newFriends = ['theo', 'renan'];
 
-  friends.push(newFriends);
+  newFriends.forEach(function (element) {
+    friends.push(element);
+  })
+
   console.log(friends) // ['enora', 'hugo', 'theo', 'renan'];
+  // Nous sommes obligé d'itérer pour passer tous les éléments d'un tableau dans l'autre.
 ```
 
 ```
