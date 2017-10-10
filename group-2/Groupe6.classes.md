@@ -310,4 +310,11 @@ class Sportif extends Humain {
 
 ### VIDÉO : 
 
+Vidéo complémentaire pour le cours sur l'es6 par Graphikart:
+
 https://www.youtube.com/watch?v=5146X8FSBUQ
+
+
+### Source :
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
+Cerveau d'Artium, source inépuisable de savoirs
