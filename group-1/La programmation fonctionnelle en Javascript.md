@@ -17,7 +17,7 @@ Le javascript n'est pas un véritable langage de programmation fonctionnelle (au
 
 ### 1. Immutabilité
 
-Un variable n’est jamais muté, cela permet de ne pas souffrir d’`effets de bord` ( c.a.d la variable n’est pas mutée à notre insu ).
+Un variable n’est jamais muté, cela permet de ne pas souffrir d’`effets de bord` (c.a.d la variable n’est pas mutée à notre insu).
 
 ```javascript
 var toto = [ “titi”, “tata”]
@@ -29,8 +29,7 @@ var bibi = [...toto, “toto”]
 
 #### 1.1 [Immutable.js](https://facebook.github.io/immutable-js/)
 
-Immutable est une lib dediée a rendre les données...immutables
-Une foi déclarées les données ne peuvent plus être modifiés
+Les données immuables ne peuvent pas être modifiées une fois créées, ce qui permet un développement d'applications beaucoup plus simple,et permet des techniques avancées de mémorisation et de détection de changement avec une logique simple.
 
 ```javascript
 const { Map } = require('immutable')
@@ -67,16 +66,16 @@ function justTen() {
 }
 ```
 
-La fonction *justTen* est pure, et peut seulement retourner une constante, car elle ne prend aucun parametre et en vertu de l'immutabilité, elle ne peut accedder que a ses propres parametres, la seule chose quel peut donc retouner n'est qu'un constante.
+La fonction *justTen* est pure, et peut seulement retourner une constante, car elle ne prend aucun parametre et en vertu de l'immutabilité, elle ne peut accedder que a ses propres parametres, la seule chose quel peut donc retouner n'est qu'une constante.
 
-Vu que les fonctions pures qui ne prennent pas de parametres ne marchent pas, elles ne sont pas vraiment utiles.
+*Vu que les fonctions pures qui ne prennent pas de parametres ne marchent pas, elles ne sont pas vraiment utiles.*
 
 ## 3. Récursivité
 
 En programmation, la `récursivité` consiste à créer une méthode ou une procédure qui s’appelle elle-même.
 
 En `Haskell` par exemple les boucles n’existent pas, il faut donc utiliser la récursivité pour faire un nombre d’operations données.
-Cependant cette pratique n'est pas toujours recommandée en Javascript du fait de l'abscence du *Tail Call* , on parlera plus de [feature instable](https://nodejs.org/en/docs/es6/) avec les dernieres version de node.js avec les flags ```--harmony --harmony_tailcalls``` qui en ne rentrant pas dans les details, optimise la recursivité des fonctions.
+Cependant cette pratique n'est pas toujours recommandée en Javascript du fait de l'abscence du *Tail Call* , on parlera plus de [feature instable](https://nodejs.org/en/docs/es6/) avec les dernieres version de node.js avec les flags ```bash --harmony --harmony_tailcalls``` qui, en ne rentrant pas dans les details, optimise la recursivité des fonctions.
 
 ```javascript
 let array = [1, 2, [3, 4], 5, [6, [7,8]]];
