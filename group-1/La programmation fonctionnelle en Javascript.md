@@ -135,7 +135,7 @@ Un type de Map qui a la garantie supplémentaire que l'ordre d'itération des en
 
 ### 5. Sources 
 
-[immutable.js](https://facebook.github.io/immutable-js/)
-[un article de ouf sur Medium](https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536)
-[Grafikart](https://www.grafikart.fr/tutoriels/divers/programmation-fonctionnelle-878)
-[Elixir](https://elixir-lang.org/docs.html)
+[immutable.js](https://facebook.github.io/immutable-js/)  
+[un article de ouf sur Medium](https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536)  
+[Grafikart](https://www.grafikart.fr/tutoriels/divers/programmation-fonctionnelle-878)  
+[Elixir](https://elixir-lang.org/docs.html)  
