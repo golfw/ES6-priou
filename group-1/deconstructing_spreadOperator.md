@@ -35,7 +35,7 @@ Décomposition, Spread Operator & rest parameter en ES6
         * [Le cas général](#le-cas-général)
           * [<strong>ES5</strong>](#es5-6)
           * [<strong>ES6</strong>](#es6-6)
-        * [Comment améliorer l'appelle des require ?](#comment-améliorer-lappelle-des-require-)
+        * [Comment améliorer l'appel des requires ?](#comment-améliorer-lappel-des-requires-)
           * [<strong>ES5</strong>](#es5-7)
           * [<strong>ES6</strong>](#es6-7)
       * [Le rest parameter](#le-rest-parameter)
