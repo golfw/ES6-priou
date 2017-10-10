@@ -380,7 +380,7 @@ UX // 14
 
 **[⬆ Retour en haut](#table-des-matières)**
 
-### Comment améliorer l'appelle des require ?
+### Comment améliorer l'appel des requires ?
 
 ##### **ES5**
 
