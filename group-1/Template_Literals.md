@@ -54,7 +54,7 @@ Echappement
 Cette forme de template permet d'utiliser des simples ou doubles quotes dans des strings et évite l'utilisation du backslash pour échapper ces caractères. En revanche cette mécanique est utilisée pour afficher des backticks : 
 ```
 `\``
-> '\'
+> '`'
 ```
 De même, l'expression de ${ doit être échappé s'il n'est pas utilisé dans un tagged template :
 ```
