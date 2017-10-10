@@ -7,6 +7,7 @@
   2. [Fonctions Pures](#2-les-fonctions-pures)  
   3. [Récursivité](#3-récursivité)   
   4. [Immutable.js](#4-immutable)
+  4. [Sources](#5-sources)
 
 ## Introduction
 
@@ -106,11 +107,7 @@ let addOne = function(v) {
 array.map(addOne)
 ```
 
-## Lib 
-
-#### 4. Immutable
-
-https://facebook.github.io/immutable-js/
+### 4. Immutable
 
 Les données d'immutable.js ne peuvent pas être modifiées une fois créées, ce qui permet un développement d'applications beaucoup plus simples,et permet des techniques avancées de mémorisation et de détection de changement avec une logique simple.
 
@@ -135,3 +132,10 @@ azerty.map(x => console.log(x)) // one, two
 ```
 
 Un type de Map qui a la garantie supplémentaire que l'ordre d'itération des entrées sera l'ordre dans lequel elles ont été set().
+
+### 5. Sources 
+
+[immutable.js](https://facebook.github.io/immutable-js/)
+[un article de ouf sur Medium](https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536)
+[Grafikart](https://www.grafikart.fr/tutoriels/divers/programmation-fonctionnelle-878)
+[Elixir](https://elixir-lang.org/docs.html)
