@@ -334,7 +334,9 @@ En ES5 le problème persistera car même avec la method Object.assign(), on obti
 
 La décomposition des objets est relativement la même que celle des tableaux avec quelques spécificités supplémentaires. La principale difference entre ES5 et ES6 est **la syntaxe qui est simplifiée en ES6**.[<sup>*</sup>](#bibliographie)
 
-#### Exemple en ES5
+### Le cas général
+
+##### **ES5**
 
 ```
 // Partons d'un objet `notesHetic`
@@ -351,7 +353,7 @@ JS // 15
 UX // 14
 
 ```
-#### Exemple en ES6
+##### **ES6**
 
 ```
 // Désormais en ES6, la syntaxe est la suivante :
@@ -370,12 +372,29 @@ const { JS, UX } = getnotesHetic()
 JS // 15
 UX // 14
 
-// On peut également optimiser les require('')
-// ES5:
-const superFunction = require('./mesFunctions').superFunction
+```
 
-//ES6:
+### Comment améliorer l'appelle des require ?
+
+##### **ES5**
+
+```
+const superFunction = require('./mesFunctions').superFunction
+const theBestFunction = require('./mesFunctions').theBestFunction
+
+// Nous sommes obligé d'appeler deux variables pour importer nos fonctions du require.
+
+```
+
+##### **ES6**
+
+```
+// Désormais en ES6, la syntaxe est la suivante :
 const { superFunction } = require('./mesFunctions')
+
+// Le code est plus lisible et scalable, car nous ouvons chaîner, en appelant plusieurs fonctions :
+
+const { superFunction, theBestFunction } = require('./mesFunctions')
 
 ```
 
