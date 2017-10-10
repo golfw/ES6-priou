@@ -20,7 +20,7 @@ const firstName = 'Eric';
 const lastName = 'Priou';
 
 return {
-	firstName, 
+	firstName,
 	lastName,
 }
 
@@ -51,7 +51,7 @@ const child = {
 Object.setPrototypeOf(child, parent);
 child.foo(); // Hello from the Parent
 			   // Hello from the Child
-			   
+
 
 ```
 
@@ -105,7 +105,7 @@ var person = {
     return this.firstName;
   },
   firstName: "",
-  
+
   set setName(text) {
   	this.firstName = text;
   }
@@ -136,7 +136,7 @@ La différence avec une fonction classique, est que les fonctions classiques com
 
 
 ```js
-function* foo() { 
+function* foo() {
   yield 1;
   yield 2;
   yield 3;
@@ -182,24 +182,24 @@ La méthode `keys()` renvoie un nouvel objet Array Iterator qui contient les cle
 
 ```js
 const arr = ["a","b","c"];
-const example = arr.keys(); 
+const example = arr.keys();
 console.log(example);
 // output: [0, 1, 2]
 ```
 <hr>
 
-### Array.prototype.entries() 
+### Array.prototype.entries()
 La méthode `entries()` renvoie un nouvel objet de type  Array Iterator qui contient le couple clef/valeur pour chaque éléments du tableau.
 
 ```js
 const arr = ["a","b","c"];
-const exmple = arr.entries(); 
+const exmple = arr.entries();
 console.log(example);
 // output: Array Iterator [[0, "a"], [1, "b"], [2, "c"]]
 ```
 <hr>
 
-### Array.prototype.find() 
+### Array.prototype.find()
 La méthode `find()` renvoie la valeur du premier élément trouvé dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur undefined est renvoyée.
 
 ```js
@@ -211,7 +211,7 @@ console.log(found, notfound)
 ```
 <hr>
 
-### Array.prototype.fill() 
+### Array.prototype.fill()
 La méthode `fill()` remplit tous les éléments d'un tableau entre deux index avec une valeur statique.
 
 ```js
@@ -230,6 +230,8 @@ console.log(arr.copyWithin(1, 5)])
 // output  "hello","bob", "my", "name", "is" "bob"]
 ```
 
+## Participants
+[KylianLM](https://github.com/KylianLM)
 
 ## Sources
 
