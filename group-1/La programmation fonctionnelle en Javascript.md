@@ -6,7 +6,7 @@
   1. [Immutabilité](#1-immutabilité)  
   2. [Fonctions Pures](#2-les-fonctions-pures)  
   3. [Récursivité](#3-récursivité)   
-  4. [Immutable.js](#4-Immutable.js)
+  4. [Immutable.js](#4-immutable)
 
 ## Introduction
 
@@ -108,9 +108,11 @@ array.map(addOne)
 
 ## Lib 
 
-#### 4. [Immutable.js](https://facebook.github.io/immutable-js/)
+#### 4. Immutable
 
-Les données immutable ne peuvent pas être modifiées une fois créées, ce qui permet un développement d'applications beaucoup plus simples,et permet des techniques avancées de mémorisation et de détection de changement avec une logique simple.
+https://facebook.github.io/immutable-js/
+
+Les données d'immutable.js ne peuvent pas être modifiées une fois créées, ce qui permet un développement d'applications beaucoup plus simples,et permet des techniques avancées de mémorisation et de détection de changement avec une logique simple.
 
 ```javascript
 // importe l'objet Map de immutable 
