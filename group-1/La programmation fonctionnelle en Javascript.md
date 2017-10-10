@@ -79,7 +79,15 @@ La fonction *justTen* est pure, et peut seulement retourner une constante, car e
 En programmation, la `récursivité` consiste à créer une méthode ou une procédure qui s’appelle elle-même.
 
 En `Haskell` par exemple les boucles n’existent pas, il faut donc utiliser la récursivité pour faire un nombre d’operations données.
-Cependant cette pratique n'est pas toujours recommandée en Javascript du fait de l'abscence du *Tail Call* , on parlera plus de [feature instable](https://nodejs.org/en/docs/es6/) avec les dernieres version de node.js avec les flags ```bash --harmony --harmony_tailcalls``` qui, en ne rentrant pas dans les details, optimise la recursivité des fonctions.
+Cependant cette pratique n'est pas toujours recommandée en Javascript du fait de l'abscence du *Tail Call* , on parlera plus de [feature instable](https://nodejs.org/en/docs/es6/) avec les dernieres version de node.js  
+
+**Notion Avancée :**
+[*Tail call*](http://benignbemine.github.io/2015/07/19/es6-tail-calls/)
+```shell 
+node index.js --harmony --harmony_tailcalls
+``` 
+
+qui, en ne rentrant pas dans les details, optimise la recursivité des fonctions.
 
 ```javascript
 let array = [1, 2, [3, 4], 5, [6, [7,8]]];
@@ -96,9 +104,6 @@ let addOne = function(v) {
 // retourne [2, 3, [4, 5], 6, [7, [8, 9]]]
 array.map(addOne)
 ```
-
-**Notion Avancée :**
-[*Tail call*](http://benignbemine.github.io/2015/07/19/es6-tail-calls/)
 
 ## Lib 
 
