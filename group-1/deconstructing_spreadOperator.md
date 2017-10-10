@@ -38,6 +38,7 @@ Décomposition, Spread Operator & rest parameter en ES6
             * [Exemple en ES5](#exemple-en-es5-1)
             * [Exemple en ES6](#exemple-en-es6-1)
     * [Bibliographie](#bibliographie)
+    * [Contributeurs](#contributeurs)
 
 Trois petits points
 -------------
@@ -446,6 +447,52 @@ Bibliographie
 [https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateur_de_d%C3%A9composition](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateur_de_d%C3%A9composition)
 
 [https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/assign](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/assign)
+
+
+**[⬆ Retour en haut](#table-des-matières)**
+
+
+Contributeurs
+===================
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center" width="20%" valign="top">
+        <a href="https://avatars0.githubusercontent.com/u/16922579?v=4&s=400" target="_blank"><img width="150" height="150" src="https://avatars0.githubusercontent.com/u/16922579?v=4&s=400" style="max-width:100%;"></a>
+        <br>
+        <a href="https://github.com/renanbronchart">Renan Bronchart</a>
+        <p>Core</p>
+        <br>
+        <p>Developer Front-End</p>
+      </td>
+      <td align="center" valign="top" width="20%">
+        <a href="https://avatars3.githubusercontent.com/u/17702414?v=4&s=400" target="_blank"><img width="150" height="150" src="https://avatars3.githubusercontent.com/u/17702414?v=4&s=400" style="max-width:100%;"></a>
+        <br>
+        <a href="https://github.com/HugoSonet">Hugo Sonet</a>
+        <p>Core</p>
+        <br>
+        <p>UX UI Designer</p>
+      </td>
+      <td align="center" valign="top" width="20%">
+        <a href="https://avatars1.githubusercontent.com/u/24933654?v=4&s=400" target="_blank"><img width="150" height="150" src="ttps://avatars1.githubusercontent.com/u/24933654?v=4&s=400" style="max-width:100%;"></a>
+        <br>
+        <a href="https://github.com/Enonouille">Enora Gathinioll</a>
+        <p>Core</p>
+        <br>
+        <p>UX UI Designer</p>
+      </td>
+      <td align="center" valign="top" width="20%">
+        <a href="https://avatars3.githubusercontent.com/u/17385665?v=4&s=400" target="_blank"><img width="150" height="150" src="https://avatars3.githubusercontent.com/u/17385665?v=4&s=400" style="max-width:100%;"></a>
+        <br>
+        <a href="https://github.com/Psyker">Theo Bourgoin</a>
+        <p>Core</p>
+        <br>
+        <p>Developer Back-End</p>
+      </td>
+     </tr>
+  </tbody>
+</table>
 
 
 **[⬆ Retour en haut](#table-des-matières)**
