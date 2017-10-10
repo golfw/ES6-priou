@@ -72,8 +72,8 @@ La fonction *justTen* est pure, et peut seulement retourner une constante, car e
 
 *Vu que les fonctions pures qui ne prennent pas de parametres ne marchent pas, elles ne sont pas vraiment utiles.*
 
-**Notion Avancée :**
-[filter , map et reduce en Javascript](https://www.youtube.com/watch?v=woySeSNBL3o)
+:grey_exclamation: **Notion Avancée :**
+[lambda, filter , map et reduce en Javascript](https://www.youtube.com/watch?v=woySeSNBL3o)
 
 ## 3. Récursivité
 
@@ -82,7 +82,7 @@ En programmation, la `récursivité` consiste à créer une méthode ou une proc
 En `Haskell` par exemple les boucles n’existent pas, il faut donc utiliser la récursivité pour faire un nombre d’operations données.
 Cependant cette pratique n'est pas toujours recommandée en Javascript du fait de l'abscence du *Tail Call* , on parlera plus de [feature instable](https://nodejs.org/en/docs/es6/) avec les dernieres version de node.js  
 
-**Notion Avancée :**
+:grey_exclamation: **Notion Avancée :**
 [*Tail call*](http://benignbemine.github.io/2015/07/19/es6-tail-calls/)
 ```shell 
 node index.js --harmony --harmony_tailcalls
@@ -124,7 +124,7 @@ lol.set({"immutable" : "mwai"})
 Avec l'objet Map par exemple les valeurs sont uniquement accessibles via un getter
 
 ```javascript
-const {OrderedMap} = require('immutable')
+const { OrderedMap } = require('immutable')
 let hi = OrderedMap({un: "one"})
 let jh = OrderedMap({deux: "two"})
 let azerty = hi.concat(jh)
