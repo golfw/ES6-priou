@@ -72,7 +72,7 @@ La fonction *justTen* est pure, et peut seulement retourner une constante, car e
 *Vu que les fonctions pures qui ne prennent pas de parametres ne marchent pas, elles ne sont pas vraiment utiles.*
 
 **Notion Avancée :**
-[filter , map et reduce en Javascript](#https://www.youtube.com/watch?v=woySeSNBL3o)
+[filter , map et reduce en Javascript](https://www.youtube.com/watch?v=woySeSNBL3o)
 
 ## 3. Récursivité
 
