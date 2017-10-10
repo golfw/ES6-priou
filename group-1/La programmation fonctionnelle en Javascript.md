@@ -1,4 +1,6 @@
-## La Programmation fonctionnelle
+# La Programmation fonctionnelle
+
+***auteurs : Constantin Guidon , Chloé Echasseriau***  
 
 La programmation fonctionnelle est un paradigme de programmation (au même titre que la programmation procédurale ou objet). De la même manière que la programmation objet est une évolution de la programmation procédurale, la programmation fonctionnelle est une évolution de la programmation objet. Celle ci peut être utilisée en complément de ces deux paradigmes.
 
@@ -68,4 +70,6 @@ let addOne = function(v) {
 // retourne [2, 3, [4, 5], 6, [7, [8, 9]]]
 array.map(addOne)
 ```
-Cf : Tail call
+
+**Notion Avancée :**
+*Tail call*
