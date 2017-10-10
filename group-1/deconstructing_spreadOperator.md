@@ -32,11 +32,15 @@ Décomposition, Spread Operator & rest parameter en ES6
          * [Attention au scope de la décomposition](#attention-au-scope-de-la-décomposition)
                * [<strong>Exemple</strong>](#exemple)
       * [La décomposition des objets](#la-décomposition-des-objets)
-            * [Exemple en ES5](#exemple-en-es5)
-            * [Exemple en ES6](#exemple-en-es6)
+        * [Le cas général](#le-cas-général)
+          * [<strong>ES5</strong>](#es5-6)
+          * [<strong>ES6</strong>](#es6-6)
+        * [Comment améliorer l'appelle des require ?](#comment-améliorer-lappelle-des-require-)
+          * [<strong>ES5</strong>](#es5-7)
+          * [<strong>ES6</strong>](#es6-7)
       * [Le rest parameter](#le-rest-parameter)
-            * [Exemple en ES5](#exemple-en-es5-1)
-            * [Exemple en ES6](#exemple-en-es6-1)
+          * [<strong>ES5</strong>](#es5-8)
+          * [<strong>ES6</strong>](#es6-8)
     * [Bibliographie](#bibliographie)
     * [Contributeurs](#contributeurs)
 
@@ -374,6 +378,8 @@ UX // 14
 
 ```
 
+**[⬆ Retour en haut](#table-des-matières)**
+
 ### Comment améliorer l'appelle des require ?
 
 ##### **ES5**
@@ -408,7 +414,7 @@ const { superFunction, theBestFunction } = require('./mesFunctions')
 
 L'intérêt de cet opérateur : **assembler plusieurs valeurs dans un tableau.**
 
-#### Exemple en ES5
+##### **ES5**
 
 ```
   var myArray = ['fruits', 'pomme', 'poire', 'orange']
@@ -423,7 +429,7 @@ L'intérêt de cet opérateur : **assembler plusieurs valeurs dans un tableau.**
   return object;
 }
 ```
-#### Exemple en ES6
+##### **ES6**
 
 ```
 // ...values -> récupère tous les paramètres sauf le premier paramètre.
