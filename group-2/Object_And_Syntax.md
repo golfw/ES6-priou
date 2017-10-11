@@ -231,7 +231,11 @@ console.log(arr.copyWithin(1, 5)])
 ```
 
 ## Participants
-[KylianLM](https://github.com/KylianLM)
+* [Alice Sevin](https://github.com/alicesevin)
+* [Amélie Tamisier](https://github.com/Amelie52)
+* [Clément Loridan](https://github.com/ClementLoridan)
+* [Vivien Nouzarede](https://github.com/vnouzarede)
+* [Kylian Le Mette](https://github.com/KylianLM)
 
 ## Sources
 
