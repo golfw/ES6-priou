@@ -6,6 +6,8 @@
   1. [Immutabilité](#1-immutabilité)  
   2. [Fonctions Pures](#2-les-fonctions-pures)  
   3. [Récursivité](#3-récursivité)   
+  4. [Immutable.js](#4-immutable)
+  4. [Sources](#5-sources)
 
 ## Introduction
 
@@ -17,7 +19,9 @@ Le javascript n'est pas un véritable langage de programmation fonctionnelle (au
 
 ### 1. Immutabilité
 
-Un variable n’est jamais muté, cela permet de ne pas souffrir d’`effets de bord` (c.a.d la variable n’est pas mutée à notre insu).
+Un variable n’est jamais mutée, cela permet de ne pas souffrir d’`effets de bord` (c.a.d la variable n’est pas mutée à notre insu).
+en programmation fonctionnelle, x = x + 1 est illégal. **Il n'y a pas de variables dans la programmation fonctionnelle**.
+Les valeurs stockées sont toujours appelées variables à cause de l'historique mais elles sont des **constantes**, c'est-à-dire une fois que x prend une valeur, c'est cette valeur pour la vie.
 
 ```javascript
 var toto = [ “titi”, “tata”]
@@ -26,16 +30,15 @@ var bibi = toto.push(“toto”)
 // on peut aussi faire ca avec les nouvelle fonctionnalités javascript
 var bibi = [...toto, “toto”]
 ```
+**Elixir:**
 
-#### 1.1 [Immutable.js](https://facebook.github.io/immutable-js/)
-
-Les données immuables ne peuvent pas être modifiées une fois créées, ce qui permet un développement d'applications beaucoup plus simple,et permet des techniques avancées de mémorisation et de détection de changement avec une logique simple.
-
-```javascript
-const { Map } = require('immutable')
-const map1 = Map({ a: 1, b: 2, c: 3 })
-const map2 = map1.set('b', 50)
-map1.get('b') + " vs. " + map2.get('b') // 2 vs. 50
+```elixir
+map_set = MapSet.new
+MapSet.put(map_set, "foo") # MapSet<["foo"]>
+# Pipe Operateur <3
+map_set 
+  |> MapSet.put("foo") 
+  |> MapSet.put("foo") # MapSet<["foo"]>
 ```
 
 ### 2. Les fonctions pures
@@ -70,12 +73,23 @@ La fonction *justTen* est pure, et peut seulement retourner une constante, car e
 
 *Vu que les fonctions pures qui ne prennent pas de parametres ne marchent pas, elles ne sont pas vraiment utiles.*
 
+:grey_exclamation: **Notion Avancée :**
+[lambda, filter , map et reduce en Javascript](https://www.youtube.com/watch?v=woySeSNBL3o)
+
 ## 3. Récursivité
 
 En programmation, la `récursivité` consiste à créer une méthode ou une procédure qui s’appelle elle-même.
 
 En `Haskell` par exemple les boucles n’existent pas, il faut donc utiliser la récursivité pour faire un nombre d’operations données.
-Cependant cette pratique n'est pas toujours recommandée en Javascript du fait de l'abscence du *Tail Call* , on parlera plus de [feature instable](https://nodejs.org/en/docs/es6/) avec les dernieres version de node.js avec les flags ```bash --harmony --harmony_tailcalls``` qui, en ne rentrant pas dans les details, optimise la recursivité des fonctions.
+Cependant cette pratique n'est pas toujours recommandée en Javascript du fait de l'abscence du *Tail Call* , on parlera plus de [feature instable](https://nodejs.org/en/docs/es6/) avec les dernieres version de node.js  
+
+:grey_exclamation: **Notion Avancée :**
+[*Tail call*](http://benignbemine.github.io/2015/07/19/es6-tail-calls/)
+```shell 
+node index.js --harmony --harmony_tailcalls
+``` 
+
+qui, en ne rentrant pas dans les details, optimise la recursivité des fonctions.
 
 ```javascript
 let array = [1, 2, [3, 4], 5, [6, [7,8]]];
@@ -93,5 +107,35 @@ let addOne = function(v) {
 array.map(addOne)
 ```
 
-**Notion Avancée :**
-[*Tail call*](http://benignbemine.github.io/2015/07/19/es6-tail-calls/)
+### 4. Immutable
+
+Les données d'immutable.js ne peuvent pas être modifiées une fois créées, ce qui permet un développement d'applications beaucoup plus simples,et permet des techniques avancées de mémorisation et de détection de changement avec une logique simple.
+
+```javascript
+// importe l'objet Map de immutable 
+const { Map } = require('immutable')
+// on peut faire toto ou "toto"
+let lol = Map({ toto: "omg" })
+Map.isMap(lol) //true
+lol.get("toto") //omg
+lol.set({"immutable" : "mwai"})
+```
+Avec l'objet Map par exemple les valeurs sont uniquement accessibles via un getter
+
+```javascript
+const { OrderedMap } = require('immutable')
+let hi = OrderedMap({un: "one"})
+let jh = OrderedMap({deux: "two"})
+let azerty = hi.concat(jh)
+azerty // OrderedMap {size: 2, _map: Map, _list: List, __ownerID: undefined, __hash: undefined}
+azerty.map(x => console.log(x)) // one, two
+```
+
+Un type de Map qui a la garantie supplémentaire que l'ordre d'itération des entrées sera l'ordre dans lequel elles ont été set().
+
+### 5. Sources 
+
+[immutable.js](https://facebook.github.io/immutable-js/)  
+[un article de ouf sur Medium](https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536)  
+[Grafikart](https://www.grafikart.fr/tutoriels/divers/programmation-fonctionnelle-878)  
+[Elixir](https://elixir-lang.org/docs.html)  
