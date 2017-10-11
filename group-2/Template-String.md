@@ -99,3 +99,10 @@ const finalText = `Cet email est ${emailRegex.test(email) ? 'valide' : 'invalide
 # 8/ L'inconvénient des templates string
 
 - Les Templates String ne sont pas compatibles sur les navigateurs ne prenant pas en charge ES6. L'utilisation de Babel est vivement conseillée pour la compatibilité avec les anciens navigateurs.
+
+
+### Participants
+
++ [Julien Da Silva](https://github.com/juliendasilva)
++ [Véronique Choquet](https://github.com/Henka-nk)
++ [Esther de Saint Blanquat](https://github.com/Taster9)
