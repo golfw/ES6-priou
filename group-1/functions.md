@@ -466,6 +466,7 @@ Arrow Functions:
 * [http://tc39wiki.calculist.org/es6/arrow-functions/](http://tc39wiki.calculist.org/es6/arrow-functions/)
 
 
-
+-----
+Participants: Lucille Delmas, Wladimir Delenclos, Jérémy Bourel
 
 
