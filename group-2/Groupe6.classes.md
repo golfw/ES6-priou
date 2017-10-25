@@ -318,3 +318,9 @@ https://www.youtube.com/watch?v=5146X8FSBUQ
 ### Source :
 https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
 Cerveau d'Artium, source inépuisable de savoirs
+
+### Participants : 
+
+Marie Malherbe (https://github.com/mariemalherbe)
+Artium Wasse (https://github.com/Artikodin)
+Tanguy Mombert (https://github.com/tangmomb)
