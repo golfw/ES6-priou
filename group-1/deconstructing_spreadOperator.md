@@ -488,7 +488,7 @@ Contributeurs
   <tbody>
     <tr>
       <td align="center" width="20%" valign="top">
-        <a href="https://avatars0.githubusercontent.com/u/16922579?v=4&s=400" target="_blank"><img width="150" height="150" src="https://avatars0.githubusercontent.com/u/16922579?v=4&s=400" style="max-width:100%;"></a>
+        <a href="https://github.com/renanbronchart" target="_blank"><img width="150" height="150" src="https://avatars0.githubusercontent.com/u/16922579?v=4&s=400" style="max-width:100%;"></a>
         <br>
         <a href="https://github.com/renanbronchart">Renan Bronchart</a>
         <p>Core</p>
@@ -496,7 +496,7 @@ Contributeurs
         <p>Developer Front-End</p>
       </td>
       <td align="center" valign="top" width="20%">
-        <a href="https://avatars3.githubusercontent.com/u/17702414?v=4&s=400" target="_blank"><img width="150" height="150" src="https://avatars3.githubusercontent.com/u/17702414?v=4&s=400" style="max-width:100%;"></a>
+        <a href="https://github.com/HugoSonet" target="_blank"><img width="150" height="150" src="https://avatars3.githubusercontent.com/u/17702414?v=4&s=400" style="max-width:100%;"></a>
         <br>
         <a href="https://github.com/HugoSonet">Hugo Sonet</a>
         <p>Core</p>
@@ -504,7 +504,7 @@ Contributeurs
         <p>UX UI Designer</p>
       </td>
       <td align="center" valign="top" width="20%">
-        <a href="https://avatars1.githubusercontent.com/u/24933654?v=4&s=400" target="_blank"><img width="150" height="150" src="ttps://avatars1.githubusercontent.com/u/24933654?v=4&s=400" style="max-width:100%;"></a>
+        <a href="https://github.com/Enonouille" target="_blank"><img width="150" height="150" src="https://avatars1.githubusercontent.com/u/24933654?s=400&v=4" style="max-width:100%;"></a>
         <br>
         <a href="https://github.com/Enonouille">Enora Gathinioll</a>
         <p>Core</p>
@@ -512,7 +512,7 @@ Contributeurs
         <p>UX UI Designer</p>
       </td>
       <td align="center" valign="top" width="20%">
-        <a href="https://avatars3.githubusercontent.com/u/17385665?v=4&s=400" target="_blank"><img width="150" height="150" src="https://avatars3.githubusercontent.com/u/17385665?v=4&s=400" style="max-width:100%;"></a>
+        <a href="https://github.com/Psyker" target="_blank"><img width="150" height="150" src="https://avatars3.githubusercontent.com/u/17385665?v=4&s=400" style="max-width:100%;"></a>
         <br>
         <a href="https://github.com/Psyker">Theo Bourgoin</a>
         <p>Core</p>
