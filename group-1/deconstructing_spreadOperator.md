@@ -42,7 +42,7 @@ Décomposition, Spread Operator & rest parameter en ES6
           * [<strong>ES5</strong>](#es5-8)
           * [<strong>ES6</strong>](#es6-8)
     * [Bibliographie](#bibliographie)
-    * [Contributeurs](#contributeurs)
+    * [Participants](#participants)
 
 Trois petits points
 -------------
@@ -481,7 +481,7 @@ Bibliographie
 **[⬆ Retour en haut](#table-des-matières)**
 
 
-Contributeurs
+Participants
 ===================
 
 <table>
