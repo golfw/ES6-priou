@@ -153,4 +153,4 @@ https://web.archive.org/web/20170202023826/https://medium.com/@xilefmai/efficien
 ## Participants
 
 [Constantin Guidon](https://github.com/zelazna)
-[Chloé Echasseriau](https://nemeditpasquetunaspasdecomptegithub.pasnet)
+[Chloé Echasseriau](https://github.com/Clorio)
