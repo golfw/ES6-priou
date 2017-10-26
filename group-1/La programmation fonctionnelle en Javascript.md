@@ -100,7 +100,7 @@ Voilà pourquoi, les fonctions pures sans paramètre ne sont pas du tout utiles.
 
 &nbsp;
 > **Hint** Notion Avancée :
-[lambda, filter , map et reduce en Javascript](https://www.youtube.com/watch?v=woySeSNBL3o)
+[lambda, filter , map et reduce en Javascript, la Composition , les Monades](https://www.youtube.com/watch?v=woySeSNBL3o)
 
 ### Récursivité
 
@@ -148,6 +148,7 @@ function repeat(operation, num) {
 ### Articles en anglais
 
 * [un article de ouf sur Medium](https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536)
+* [un autre plus axé composition et monades](https://medium.com/javascript-scene/composing-software-an-introduction-27b72500d6ea)
 * [Le must de la programmation function en es6](https://leanpub.com/javascriptallongesix/read)
 * [Série d'articles suivre](https://medium.freecodecamp.org/functional-programming-in-js-with-practical-examples-part-1-87c2b0dbc276)
 * [Un article de fond qui avait disparu (merci la wayback machine)](https://web.archive.org/web/20170202023826/https://medium.com/@xilefmai/efficient-javascript-14a11651d563)
