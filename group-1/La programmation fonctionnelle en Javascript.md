@@ -1,4 +1,4 @@
-# La Programmation fonctionnelle 
+# La Programmation fonctionnelle
 
 ## Introduction
 
@@ -21,11 +21,17 @@ var bibi = toto.push(“toto”)
 // on peut aussi faire ca avec l'opérateur de decomposition es6
 var bibi = [...toto, “toto”]
 ```
-#### Comparaison avec Elixir:
+
+#### Comparaison avec Elixir
 
 > **Note** Une petite explication serait la bienvenue…
 
+Elixir est un langage dynamique et fonctionnel conçu pour construire des applications évolutives et maintenables.
+
+Elixir tire parti de la VM Erlang, connue pour ses systèmes à faible latence, distribués et tolérants aux pannes, tout en étant utilisée avec succès dans le développement web et le domaine logiciel embarqué.
+
 ```elixir
+# creation de la map
 map_set = MapSet.new
 MapSet.put(map_set, "foo") # MapSet<["foo"]>
 # Pipe Operateur <3
@@ -50,6 +56,7 @@ console.log( lol.get("toto") )//omg
 lol.set( {"immutable" : "mwai"} )
 console.log( lol )// <--- Map { "toto": "omg" } !!
 ```
+
 Avec l'objet Map, les valeurs sont uniquement accessibles via un getter
 
 ```javascript
@@ -72,8 +79,8 @@ Une fonction pure est une fonction qui remplit les 2 conditions suivantes :
 * La fonction n'a pas d'effets de bords / d'effets secondaires
 
 > **Hint** D'une certaine façon, les fonctions pures poursuivent le même concept d’immutabilité des variables, cette fois attribué aux opérations.**
+> **Note** Exemples pas très convaincants
 
-> **Note** Exemples pas très convaincants 
 ```javascript
 // Cette fonction est pure car elle n'a pas d'effet de bords et ne dépend de rien d'autre que ses arguments
 let push = function (tableau, clef) {
@@ -104,10 +111,11 @@ Voilà pourquoi, les fonctions pures sans paramètre ne sont pas du tout utiles.
 En programmation, la `récursivité` consiste à créer une méthode ou une procédure qui s’invoque elle-même.
 
 En `Haskell` par exemple les boucles n’existent pas, il faut donc utiliser la récursivité pour faire un nombre d’operations données.
-Cependant cette pratique n'est pas toujours recommandée en Javascript du fait de l'abscence du *Tail Call* , on parlera plus de [feature instable](https://nodejs.org/en/docs/es6/) avec les dernieres version de node.js  
+Cependant cette pratique n'est pas toujours recommandée en Javascript du fait de l'abscence du *Tail Call* , on parlera plus de [feature instable](https://nodejs.org/en/docs/es6/) avec les dernieres version de node.js
 
 :grey_exclamation: **Notion Avancée :**
 [*Tail call*](http://benignbemine.github.io/2015/07/19/es6-tail-calls/)
+
 ```shell
 node index.js --harmony --harmony_tailcalls
 ```
@@ -132,23 +140,21 @@ array.map(addOne)
 
 ## Sources
 
-#### Articles en anglais :
+### Articles en anglais
 
-- [un article de ouf sur Medium](https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536)  
-- [Le must de la programmation function en es6](https://leanpub.com/javascriptallongesix/read)
-- [Série d'articles suivre](https://medium.freecodecamp.org/functional-programming-in-js-with-practical-examples-part-1-87c2b0dbc276)
-- [Un article de fond qui avait disparu (merci la wayback machine)](
-https://web.archive.org/web/20170202023826/https://medium.com/@xilefmai/efficient-javascript-14a11651d563)
-- [Introduction à la programmation fonctionnelle en ecmascript](https://medium.com/@chetcorcos/functional-programming-for-javascript-people-1915d8775504)
+* [un article de ouf sur Medium](https://medium.com/@cscalfani/so-you-want-to-be-a-functional-programmer-part-1-1f15e387e536)
+* [Le must de la programmation function en es6](https://leanpub.com/javascriptallongesix/read)
+* [Série d'articles suivre](https://medium.freecodecamp.org/functional-programming-in-js-with-practical-examples-part-1-87c2b0dbc276)
+* [Un article de fond qui avait disparu (merci la wayback machine)](https://web.archive.org/web/20170202023826/https://medium.com/@xilefmai/efficient-javascript-14a11651d563)
+* [Introduction à la programmation fonctionnelle en ecmascript](https://medium.com/@chetcorcos/functional-programming-for-javascript-people-1915d8775504)
 
-#### En français :
- 
+### En français
+
 [La programmation fonctionnelle, Grafikart](https://www.grafikart.fr/tutoriels/divers/programmation-fonctionnelle-878)
 
-#### Langages :
- 
-[Elixir](https://elixir-lang.org/docs.html)  
+#### Langages
 
+[Elixir](https://elixir-lang.org/docs.html)
 
 ## Participants
 
