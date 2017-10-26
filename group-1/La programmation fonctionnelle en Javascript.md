@@ -24,20 +24,15 @@ var bibi = [...toto, “toto”]
 
 #### Comparaison avec Elixir
 
-> **Note** Une petite explication serait la bienvenue…
-
 Elixir est un langage dynamique et fonctionnel conçu pour construire des applications évolutives et maintenables.
 
-Elixir tire parti de la VM Erlang, connue pour ses systèmes à faible latence, distribués et tolérants aux pannes, tout en étant utilisée avec succès dans le développement web et le domaine logiciel embarqué.
+Il tire parti de la VM Erlang, connue pour ses systèmes à faible latence, distribués et tolérants aux pannes, tout en étant utilisée avec succès dans le développement web et le domaine logiciel embarqué.
 
 ```elixir
-# creation de la map
-map_set = MapSet.new
-MapSet.put(map_set, "foo") # MapSet<["foo"]>
-# Pipe Operateur <3
-map_set
-  |> MapSet.put("foo")
-  |> MapSet.put("foo") # MapSet<["foo"]>
+list = [ “titi”, “tata”]
+# on "ajoute" un element a la liste, en fait la valeur renvoyé est une nouvelle variable
+["tutu" | list]
+[ head | tail ] = list # head => "tutu" , tail => [ “titi”, “tata”] # patern matching https://elixir-lang.org/getting-started/pattern-matching.html
 ```
 
 #### La librairie [Immutable.js](https://facebook.github.io/immutable-js/)
@@ -76,22 +71,23 @@ Une fonction pure est une fonction qui remplit les 2 conditions suivantes :
 
 * Elle prend au moins un argument (voir plus loin)
 * Le résultat de la fonction ne dépend que des arguments et d'aucun contexte extérieur
-* La fonction n'a pas d'effets de bords / d'effets secondaires
+* La fonction n'a pas d'effets de bords / d'effets secondaires, c'est a dire qu'elle ne modifie directement la valeur qui lui est passé mais renvoir plutot une nouvelle valeur
 
 > **Hint** D'une certaine façon, les fonctions pures poursuivent le même concept d’immutabilité des variables, cette fois attribué aux opérations.**
 > **Note** Exemples pas très convaincants
 
 ```javascript
 // Cette fonction est pure car elle n'a pas d'effet de bords et ne dépend de rien d'autre que ses arguments
-let push = function (tableau, clef) {
- return [...tableau, clef]
+function add(x, y) {
+    return x + y;
 }
+
 // Ces fonctions ne sont pas pures, car le résultat varie et ne dépend pas des arguments
 Date.now()
 Math.rand()
 ```
 
-Un autre Exemple
+Un autre Exemple:
 
 ```javascript
 function justTen() {
@@ -106,7 +102,7 @@ Voilà pourquoi, les fonctions pures sans paramètre ne sont pas du tout utiles.
 > **Hint** Notion Avancée :
 [lambda, filter , map et reduce en Javascript](https://www.youtube.com/watch?v=woySeSNBL3o)
 
-### 3. Récursivité
+### Récursivité
 
 En programmation, la `récursivité` consiste à créer une méthode ou une procédure qui s’invoque elle-même.
 
@@ -138,6 +134,15 @@ let addOne = function(v) {
 array.map(addOne)
 ```
 
+```javascript
+function repeat(operation, num) {
+    if (num > 0) {
+        operation()
+        repeat(operation, --num)
+    }
+}
+```
+
 ## Sources
 
 ### Articles en anglais
@@ -150,13 +155,13 @@ array.map(addOne)
 
 ### En français
 
-[La programmation fonctionnelle, Grafikart](https://www.grafikart.fr/tutoriels/divers/programmation-fonctionnelle-878)
+* [La programmation fonctionnelle, Grafikart](https://www.grafikart.fr/tutoriels/divers/programmation-fonctionnelle-878)
 
 #### Langages
 
-[Elixir](https://elixir-lang.org/docs.html)
+* [Elixir](https://elixir-lang.org/docs.html)
 
 ## Participants
 
-[Constantin Guidon](https://github.com/zelazna)
-[Chloé Echasseriau](https://github.com/Clorio)
+* [Constantin Guidon](https://github.com/zelazna)
+* [Chloé Echasseriau](https://github.com/Clorio)
