@@ -467,5 +467,5 @@ Arrow Functions:
 
 
 -----
-Participants:  [Lucille Delmas](https://github.com/lucilledelmas), [Wladimir Delenclos](https://github.com/wdelenclos), [Jérémy Bourel](https://www.linkedin.com/in/j%C3%A9r%C3%A9my-bourel-721571135/)
+Participants:  [Lucille Delmas](https://github.com/lucilledelmas), [Wladimir Delenclos](https://github.com/wdelenclos), [Jérémy Bourel](https://github.com/JrBour)
 
