@@ -90,4 +90,8 @@ Sources:
 <https://jakearchibald.com/2017/es-modules-in-browsers>
 
 
-
+_Authors:_
+Daniel Dupont,
+Christopher loubassou,
+Constantin Bürger,
+Alexandre Cibot
