@@ -39,23 +39,20 @@ ___
 
 
 
-# EcmaScript courant
-
+# EcmaScript 5: rappels
 	
 
 ## Définition d’une fonction 
 
 
-
-Une fonction est une procédure/suite d’instruction jouant un rôle précis dans le code Javascript. Elles peuvent par exemple permettre de retourner une ou plusieurs valeur(s), selon ce qu’elle retourne et ses paramètres. 
-
+Une fonction est une suite d’instruction jouant un rôle précis dans le code Javascript. Elles peuvent par exemple permettre de retourner une ou plusieurs valeur(s), selon ce qu’elle retourne et ses paramètres. 
 
 
 Pour définir une fonction,  il suffit de commencer par le mot function.
 
 
 ##### Exemple: 
-```
+```javascript
 
 function carré(nombre) {
 
@@ -74,12 +71,11 @@ function carré(nombre) {
 ### Fonctions courantes
 
 
-
 Ce qu’on appelle l’expression de fonction et le fait de déclarer une fonction dans une variable. Afin d’avoir un code le plus propre possible, il faut donner un nom à la fonction en la déclarant dans la variable.
 
 
 ##### Exemple: 
-```
+```javascript
 
 var carré = function (nombre) { 
 
@@ -94,7 +90,7 @@ Ou sinon, il suffit de commencer par  ```function``` puis le nom de la fonction.
 
 ##### Exemple: 
 
-```
+```javascript
 function carré(nombre) {
   return nombre * nombre;
 };
@@ -109,7 +105,7 @@ Les fonctions dites anonymes, sont des fonctions qui ne sont pas nommées, et do
 
 
 ##### Exemple: 
-```
+```javascript
 function() {}   // Fonction anonymes
 
 ( function ( x, y ) {
@@ -125,12 +121,11 @@ function() {}   // Fonction anonymes
 ### Closures
 
 
-
 Une closure est une fonction interne qui utilise les variables locales dans la fonction dans laquelle elle est imbriquée. La closure accepte trois portées de variables : il a accès à ses propres variables (entre ses accolades), aux variables de la fonction dans laquelle il est imbriqué, et les variables globales.
 
 
 ##### Exemple: 
-```
+```javascript
 
 function creerFonction() {
 
@@ -171,7 +166,7 @@ De plus, on peut changer la portée du ```this``` avec la fonction apply() ou ca
 
 ##### Exemple: 
 
-```
+```javascript
 
 function Personne() {
 
@@ -197,7 +192,7 @@ function Personne() {
 
 
 
-Nous verrons qu’en ES6, cette problématique a été prise en compte.
+*En ES6, cette problématique a été prise en compte.*
 
 
 
@@ -210,7 +205,7 @@ Nous verrons qu’en ES6, cette problématique a été prise en compte.
 
 
 
-Pour répondre à un besoin de sécurité et d’optimisation des scripts. Il est possible en EcmaScript 5 de choisir une variante restrictive de JavaScript. Cette variante est invoquée en début de script de la sorte: 
+Pour répondre à un besoin de sécurité et d’optimisation des scripts. Il est possible en EcmaScript 5 de choisir une variante restrictive de JavaScript. *En ES6, il est activé par défault.* Cette variante est invoquée en début de script de la sorte: 
 
 
 
@@ -220,11 +215,10 @@ Pour répondre à un besoin de sécurité et d’optimisation des scripts. Il es
 
 
 
-Il permet de supprimer toutes les erreurs silencieuses, corrige les erreurs qui font qu'il est difficile pour les moteurs JavaScript d'effectuer des optimisations, et interdit les mot-clés susceptibles d'être définis dans les prochaines versions de ECMAScript.
+Il permet de supprimer toutes les erreurs silencieuses, corrige les erreurs qui font qu'il est difficile pour les moteurs JavaScript d'effectuer des optimisations, et interdit les mot-clés susceptibles d'être définis dans les prochaines versions de ECMAScript et interdit les propriétés obsolètes telle que ```arguments.caller```.
 
-Ceci implique entre autre pour les fonctions de savoir si les paramètres sont ajoutés plusieurs fois entre les parenthèses de la fonction. 
 
-L’usage du ```this``` est notamment impacté par cette variante, il est impossible de faire référence à l'objet window du navigateur grâce à ```this``` au sein d'une fonction en mode strict.
+En outre, l’usage du ```this``` est notamment impacté par cette variante, il est impossible de faire référence à l'objet window du navigateur grâce à ```this``` au sein d'une fonction en mode strict.
 
 
 
@@ -241,7 +235,7 @@ Le but des fonctions fléchées ( Arrow function en anglais) est de résoudre le
 
 
 
-```
+``` javascript
 function myFunction(arguments) {
 	// Le code que la fonction va devoir exécuter
 }
@@ -270,7 +264,7 @@ Ainsi, une fonction fléchée vide se déclare comme l’exemple ci-dessous, vid
 
 
 ##### Exemple: 
-```
+```javascript
 let empty = () => {};
 
 ```
@@ -281,7 +275,7 @@ Pour faire encore plus simple il est possible, dans le cas d’un seul paramètr
 
 
 ##### Exemple: 
-```
+```javascript
 let identity = x => x;
 
 let square = x => x * x;
@@ -294,7 +288,7 @@ Dans le cas cas ou l’on veut retourner un objet littéral, la présence des ac
 
 
 ##### Exemple: 
-```
+```javascript
 let key_maker = x => ({key: x});
 
 ```
@@ -305,7 +299,7 @@ Dans le cas d’une fonctionne anonyme, la syntaxe reste la même:
 
 
 
-```
+```javascript
 () => {
   // instructions
 }
@@ -318,7 +312,7 @@ Et de même, si l’on veut faire une IIFE en ES6 avec une fonction fléchée c�
 
 ##### Exemple: 
 
-```
+```javascript
 ()=> {
   // instructions
 }()
@@ -336,7 +330,7 @@ La problématique de contexte du ```this``` dans une fonction fléchée a été 
 
 ##### Exemple: 
 
-```
+```javascript
 const obj = {
   method: function () {
     return () => this;
@@ -372,7 +366,7 @@ Grâce aux paramètres par défaut qui existent depuis ECMAScript 6, on peut se 
 
 ##### Exemple avant ES6: 
 
-```
+```javascript
 function multiplier(a, b) {
   var b = (typeof b !== 'undefined') ? b : 1;
   return a * b;
@@ -384,7 +378,7 @@ function multiplier(a, b) {
 
 ##### Exemple ES6 : 
 
-```
+```javascript
 function multiplier(a, b = 1) {
   return a * b;
 }
@@ -405,7 +399,7 @@ function multiplier(a, b = 1) {
 
 
 
-```
+```javascript
 function singulierAutoPluriel(singulier, pluriel = singulier+"s", message = pluriel + " BOOU :) !!!") {
 
   return [singulier, pluriel, rallyingCry ]; 
@@ -421,7 +415,7 @@ function singulierAutoPluriel(singulier, pluriel = singulier+"s", message = plur
 
 
 
-```
+```javascript
 function f([x, y] = [1, 2], {z: z} = {z: 3}) {
   return x + y + z;
 }
