@@ -75,8 +75,14 @@ Les sauts de lignes sont standardisés en Line Feed (LF) dans les templates litt
 ligne` === 'Saut\nligne)
 ```
 
-Sources
--------------
+
+## Sources
 - https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Litt%C3%A9raux_gabarits
 - https://developers.google.com/web/updates/2015/01/ES6-Template-Strings
 - http://exploringjs.com/es6/ch_template-literals.html
+
+
+## Equipe
+- [Laetitia Bellail](https://github.com/laetisbel)
+- [Victor Billard-Madrières](https://github.com/vbillardm)
+- [Cyril Bécret](https://github.com/cbecret)
